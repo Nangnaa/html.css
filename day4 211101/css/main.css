@@ -1,0 +1,120 @@
+#wrap{width: 100%;}
+
+/* 상단부분 */
+#header{
+    width: 100%; 
+    height: 165px;
+    
+}
+
+#header_in{
+    margin: 0 auto;/* 가운데정렬 */
+    width: 1200px;
+    height: 165px;   
+}
+
+#header_in .logo{
+    width: 100%;
+    height: 100px;
+    font-size: 30px; color: #444;
+    text-align: center;
+    line-height: 100px;
+    /* 행간을 height(부모값)와 같이 했을때 가운데 배치가된다. */
+}
+
+/* ul은 div안에 하나밖에없어서 생략가능 */
+#header_in .nav{width: 100%;height: 65px; } 
+#header_in .nav li{
+    float: left;
+    width: 171.4px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+} 
+#header_in .nav li a{font-size: 18px;
+    font-weight: 700;    
+} 
+
+/* 메인이미지 */
+#main_img {
+    width: 100%;
+    height: 805px;
+    background-image: url(../images/visual.jpg);
+    background-repeat: no-repeat; 
+    /* 반복없이 */
+    background-position: 50% 0 ;
+    /* 사진 가운데 기준 */
+    /* background: url(../images/visual.jpg)no-repeat 50% 0 ; */
+}
+
+
+
+/* 콘텐츠부분 */
+#contents{width: 100%;}
+
+#contents_in{
+    margin: 0 auto;
+    width: 1200px;
+    height: 1600px;
+    ;
+}
+
+/* 인기상품 */
+.product{
+    float: left;
+    width: 600px; height: 670px;
+}
+.product h3{width: 600px; height: 70px;
+    font-size: 18px; font-weight: 500;
+    line-height: 70px;
+    padding-left: 5px;
+}
+/* .product img{} */
+/* .product .info_box{} */
+.product .info_box > h4{
+    float:left; font-size: 40px;
+    margin: 40px 0 0 20px;
+}
+.product .info_box .group{float: left; margin:45px 0 0 20px;}
+.product .info_box p{font-size: 20px;}
+.product .info_box span{font-size: 14px;}
+.product .info_box > a{float: right; 
+    margin: 55px 20px 0 0 ; 
+    font-size: 18px;   
+}
+/* > 부등호는 부모와 자식개념 */
+
+/* 리스트박스 */
+.list_box{float: right; width: 545px;}
+/* float:right 내용크기만큼만 크기를 차지 하고 left는 블록처럼전체차지 */
+.list_box > ul{margin-top: 50px;}
+.list_box > ul > li{
+    border-bottom: 1px solid #ccc;
+    height: 160px;
+}
+.list_box li > h4{
+    float: left;
+    margin: 55px 0 0 20px;
+    font-size: 40px;
+}
+.list_box li > img{float: left; margin: 25px 0 0 20px;}
+.list_box li > .group{float: left; margin:60px 0 0 20px ;}
+.list_box li > .group > p{font-size: 20px;}
+.list_box li > .group > span{font-size: 14px;}
+.list_box li > a{float: right; font-size: 18px;
+                margin: 70px 20px 0 0;            
+}
+
+/* 하단부분 */
+#footer{
+    width: 100%;
+    height: 165px;
+    background-color: coral;
+}
+
+#footer_in{
+    margin: 0 auto;
+    width: 1200px;
+    height: 165px;
+    background-color: cyan;
+}

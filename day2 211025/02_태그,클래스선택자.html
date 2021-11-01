@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 내부스타일 -->
+    <style type="text/css">
+    
+    /* 선택자{속성:속성값; 속성:속성값;} */
+    /* 태그선택자 - 태그명 이용해서 선택함
+        현재 body에 있는 태그의 기본값을 선언 
+    h1{color:blue;}
+    h2{font-size: 30px;}
+    p{font-family: "바탕체"; font-size: 30px;}
+    a{text-decoration: none; color:#333;}
+    span{font-family: "바탕체"; font-size: 40px; color: coral;}
+    */
+
+    /* 클래스 선택자(class) 
+        - 의미를 두고 이름을 설정(태그명은안됨) 
+        - class 선택자는 여러 태그에게 스타일 선언할 수있다.
+    */
+    .title01{font-size: 30px; color: crimson; font-family: "바탕체";}
+    .s_ttl{font-size: 20px;}
+    .txt{font-size: 12px;/* 16px */}
+    
+    </style>
+
+    <!-- 외부스타일 -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <h1 class="title01">제목1입니다</h1>
+    <h1>제목1입니다</h1>
+    <h2 class="s_ttl">제목2입니다</h2>
+
+    <p class="txt">문단입니다</p>
+    <p>문단입니다</p>
+    <p>문단입니다</p>
+    <a href="">버튼입니다</a>
+    <span>글자태그입니다.</span>
+    <span>글자태그입니다.</span>
+</body>
+</html>
