@@ -166,55 +166,50 @@
     text-decoration: none;
 }
 
-/* info영역 */
-.info{width: 100%; 
-    height: 165px;
-    border-bottom: 1px solid #ccc;
-}
+ /* imfo영역 */
+ .info{width:100%; height:150px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;}
+.info .center_box{margin: 0 auto;
+  width: 1200px; height: 150px;}   
+.info .center_box .box1{float:left;
+  width: 240px; height: 150px;}
+  .info .box1 > span{margin: 30px 0 0 0; 
+                  font-size: 11px;
+                   display: block;}    
+  .info .box1 > h4{margin: 8px 0 0 0;
+                 font-size: 25px;}    
+  .info .box1 > p{margin: 8px 0 0 0;
+                font-size: 13px;} 
 
-.info .center_box{
-    margin: 0 auto;
-    width: 1200px; height: 150px;
-}
-    .info .center_box .box1{
-    float: left;
-    width: 240px; height: 150px;
-    }
-
-    .info .box1 span{
-    margin: 30px 0 0 0;
-    font-size: 11px;
-    display: block;    
-    }
-    .info .box1 h4{
-    margin: 8px 0 0 0;
-    font-size: 25px;
-    }
-    .info .box1 p{
-    margin: 8px 0 0 0;
-    font-size: 13px;
-    }
+.info .center_box .box2{float:left;
+  margin-left: 140px;
+  width: 480px; height: 150px;}
+  .info .box2 >p{
+      margin-top:50px;
+      font-size: 13px;}
+  .info .box2 >h4{
+      margin-top:6px;
+      font-size: 30px;}
 
 
-.info .center_box .box2{
-    float: left;
-}
-.info .center_box .box3{
-    float: right;
-}
-
-
+.info .center_box .box3{float:right;
+  width: 265px;} 
+  .info .box3 > p{margin-top:60px;} 
+  .info .box3 >img{margin-top:6px;width: 100%;} 
 
 /* 하단부분 */
-#footer{
-    width: 100%;
-    height: 165px;
-    
-}
+#footer{width: 100%; 
+  height: 165px; background-color: #f1f1f1;}
+#footer_in{ margin: 0 auto; 
+      padding-top: 30px;
+      width: 1200px;
+      height: 165px;}        
+#footer_in .footer_mn{ margin: 0 auto; width: 550px;}
+#footer_in .footer_mn > li{ float: left; width: 78.5px; 
+                      text-align: center; }  
+#footer_in .footer_mn > li > a{ font-size: 13px;}   
 
-#footer_in{
-    margin: 0 auto;
-    width: 1200px;
-    height: 165px;
-    background-color: cyan;
-}
+#footer_in .address{float: left; margin-top: 20px; 
+              width: 100%; text-align: center;
+              font-size: 13px; line-height: 1.2;} 
