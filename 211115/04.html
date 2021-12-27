@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contents {
+            margin: 0 auto;
+            width: 1840px;
+            height: 300px;
+            background-color: darkkhaki;
+        }
+
+        .contents>.article {
+            float: left;
+            margin: 25px 30px;
+            width: 400px;
+            height: 250px;
+            background-color: darkmagenta;
+        }
+
+        /* 1900 
+
+        400 400 400 400(1900에서 1600빼면 300 300에서 5로나눈다--> 중간중간)
+
+        300
+        250 */
+
+        /*
+        미디어는 상속성을 갖고잇다.
+        선택자를 빼지말고 none으로 해야된다 */
+        @media screen and (max-width:1840px) {
+            .contents {
+                margin: 0 auto;
+                width: 100%;
+                /* w:1840px */
+                height: 16.3vw;
+                /* 세로는 % 값이먹히지않는다. vw를 사용해야만한다 100vw=1840 이된다(max-width:1840px)
+                    300/18.4=16.3
+                */
+                background-color: darkkhaki;
+            }
+
+            .contents>.article {
+                float: left;
+                margin: 25px 1.6%;
+                /* 30/18.4=1.6%  이값을 넣어주지않으면 article이 밑으로 내려가게된다.*/
+                width: 21.7%;
+                /* 1840인 부모의 기준에서 /100 = 18.4 > 400/18.4= 21.7%(article의 가로값)  */
+                height: 13.5vw;
+                /* 현재화면 vw 250/18.4=13.5vw */
+                background-color: darkmagenta;
+            }
+        }
+
+        /* 최대가 1840일때 쿼리를 작동시켜라 */
+
+        /* 기준을 잘잡아주어야 반응형이 잘 작동한다.(max와 min 같이 사용도 가능 (언제?)
+        화면 최대크기 max pc에서 시작할때 최대값으로 시작
+        모바일에서 시작할땐 min 최소값에서 시작
+        */
+
+        @media screen and (max-width:1000px) {
+            body {
+                background-color: darkslategrey;
+            }
+
+            .contents {
+                margin: 0 auto;
+                width: 100%;
+                height: 300px;
+                background-color: darkkhaki;
+            }
+
+            .contents>.article {
+                float: left;
+                margin: 25px 2%;
+                /* 29 29 29 = 87 100/87 */
+                width: 29%;
+                /* 21.7 + 7.2 > 28.9%  */
+                height: 250px;
+                background-color: darkmagenta;
+            }
+        
+
+            .contents>.article:nth-child(4) {
+                display: none;
+            }
+        }
+
+            /* nth-child : 가상(x)의 선택자 */
+
+            @media screen and (max-width:480px) {
+                body {
+                    background-color: deepskyblue;
+                }
+
+                .contents {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: auto;
+                    background-color: darkkhaki;
+                }
+
+                .contents>.article {
+                    float: none;
+                    margin: 25px 5%;
+                    width: 90%;
+                    height: 250px;
+                    background-color: darkmagenta;
+                }
+
+                .contents>.article:nth-child(4) {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width:320px) {
+                .contents>.article:nth-child(4) {
+                    display: block;
+                }
+            }
+        
+    </style>
+</head>
+
+<body>
+    <div class="contents">
+        <div class="article">1</div>
+        <div class="article">2</div>
+        <div class="article">3</div>
+        <div class="article">4</div>
+
+    </div>
+</body>
+
+</html>
